@@ -4,22 +4,22 @@ import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp
 
 const Footer = () => {
     return(
-        <>
+        <div style={{position:'relative'}}>
             <button className="to-top-button" onClick={()=>window.scrollTo(0,0)}>
                 <KeyboardDoubleArrowUpIcon/>
                 <span>Top</span>
             </button>
             <div className="footer-container">
-            <img className="footer-logo" src={logo}/>
-            <div className="Contact-details">
-                <div>{contactDetails.email}</div>
-                <div>{contactDetails.phoneNumbers}</div>
-            </div>
-            <div className="copyright-message">
-                &copy; {`${new Date().getFullYear()} ${contactDetails.name}`}. All rights reserved.
+                <img className="footer-logo" src={logo}/>
+                <div className="Contact-details">
+                    <div>{contactDetails.email}</div>
+                    <div>{contactDetails.phoneNumbers}</div>
+                </div>
+                <div className="copyright-message">
+                    &copy; {`${new Date().getFullYear()} ${contactDetails.name}`}. All rights reserved.
+                </div>
             </div>
         </div>
-        </>
 
     )
 }
