@@ -1,6 +1,8 @@
 import React from 'react';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
+import TestAnimation from '../../components/TestAnimation';
+import {SimpleButton} from '../../components/Buttons';
 
 const RootPage = () => {
   return (
@@ -13,6 +15,8 @@ const RootPage = () => {
           <div style={{height:'200px',backgroundColor:'green'}} id='green'></div>
           <div style={{height:'200px',backgroundColor:'gray'}} id='gray'></div>
           <div style={{height:'200px',backgroundColor:'pink'}} id='pink'></div>
+          {/* <TestAnimation /> */}
+          <SimpleButton />
         </div>
         <Footer />
     </div>
