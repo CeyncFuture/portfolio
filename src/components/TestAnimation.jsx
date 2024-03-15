@@ -26,9 +26,9 @@ function Card({ emoji}) {
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.1 }}
     >
-      <div className="splash" />
       <motion.div className="card" variants={cardVariants}>
-        {emoji}
+        {/* {emoji} */}
+        <p>Thilina</p>
       </motion.div>
     </motion.div>
   );
