@@ -59,7 +59,6 @@ const CardSlider = () => {
         >
           <img src={square.icon} alt='Icon'  style={{width: '70px', alignSelf: 'center'}} />
           <div className='text'>{square.name}</div>
-
         </motion.div>    
       ));
     }
@@ -75,15 +74,15 @@ const CardSlider = () => {
             exit="exit"
         >
             <div className="card__header">
-            <h2>{selectedSquare.name}</h2>
-            <motion.button 
-              animate={{
-                scale: [1, 2, 2, 1, 1],
-                rotate: [0, 0, 270, 270, 0]
-              }}
-              onClick={() => setSelectedSquare(null)}>
-                <CloseIcon />
-            </motion.button>
+              <h2>{selectedSquare.name}</h2>
+              <motion.button 
+                animate={{
+                  scale: [1, 2, 2, 1, 1],
+                  rotate: [0, 0, 270, 270, 0]
+                }}
+                onClick={() => setSelectedSquare(null)}>
+                  <CloseIcon />
+              </motion.button>
             </div>
             <div className="card__content">
               <div className="card__img-placeholder" style={{alignContent:'center',justifyContent:'center', display:'flex'}}>

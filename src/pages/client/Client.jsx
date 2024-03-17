@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {lazy} from 'react';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
-import CardSlider from '../../components/CardSlider';
+// import CardSlider from '../../components/CardSlider';
+const CardSlider = lazy(()=>import('../../components/CardSlider'));
 
 const RootPage = () => {
   return (
