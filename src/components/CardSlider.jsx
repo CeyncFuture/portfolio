@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CloseIcon from '@mui/icons-material/Close';
+import { Card, CardActionArea,Hidden } from '@mui/material';
+
+
 import WebIcon from '../assets/images/Icons/Tech-web-development.png';
 import MobileIcon from '../assets/images/Icons/Tech-mobile-development.png';
 import GameIcon from '../assets/images/Icons/Tech-games-development.png';
 import CloudIcon from '../assets/images/Icons/Tech-cloud-development.png';
 import APIIcon from '../assets/images/Icons/Tech-API-development.png';
-
+import ReactIcon from '../assets/images/Icons/techStacks/web/React.png';
+import AngularIcon from '../assets/images/Icons/techStacks/web/Angular.png';
+import WordpressIcon from '../assets/images/Icons/techStacks/web/Wordpress.png';
+import Carousel from './Carousel';
 
 const wrapperVariants = {
   initial: {
@@ -35,31 +41,32 @@ const squareVariants = {
 }
 
 
-
-
 const CardSlider = () => {
     const [selectedSquare, setSelectedSquare] = useState(null);
 
     const renderSquares = () => {
 
     const squares = [
-      {id:'1', icon: WebIcon, name: 'Web Solution', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea neque quidem exercitationem possimus. 1'},
-      {id:'2', icon: MobileIcon, name: 'Mobile Solution', description: ''},
-      {id:'3', icon: APIIcon, name: 'API Solution', description: ''},
-      {id:'4', icon: CloudIcon, name: 'Cloud Solution', description: ''},
-      {id:'5', icon: GameIcon, name: 'Game Development', description: ''}];
+      {id:'1', icon: WebIcon, name: 'Web Solution', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea neque quidem exercitationem possimus. 1', technology: [WordpressIcon,ReactIcon,AngularIcon]},
+      {id:'2', icon: MobileIcon, name: 'Mobile Solution', description: '', technology: [WordpressIcon,ReactIcon,AngularIcon]},
+      {id:'3', icon: APIIcon, name: 'API Solution', description: '', technology: ['https://picsum.photos/200','https://picsum.photos/id/237/200/300']},
+      {id:'4', icon: CloudIcon, name: 'Cloud Solution', description: '', technology: ['https://picsum.photos/200','https://picsum.photos/id/237/200/300']},
+      {id:'5', icon: GameIcon, name: 'Game Development', description: '', technology: ['https://picsum.photos/200','https://picsum.photos/id/237/200/300']}];
 
       return squares.map((square, i) => (
-        <motion.div 
-          key={i}
-          className={`square square--${square.id}`} 
-          onClick={() => setSelectedSquare(square)}
-          variants={squareVariants}
-          transition={{ duration: .2, type: 'spring' }}
-        >
-          <img src={square.icon} alt='Icon'  style={{width: '70px', alignSelf: 'center'}} />
-          <div className='text'>{square.name}</div>
-        </motion.div>    
+        <Card variant='outlined' style={{margin: '5px', borderWidth: '2px'}} key={i}>
+          <CardActionArea>
+            <motion.div 
+              className={`square square--${square.id}`} 
+              onClick={() => setSelectedSquare(square)}
+              variants={squareVariants}
+              transition={{ duration: .2, type: 'spring' }}
+            >
+              <img src={square.icon} alt='Icon'  style={{width: '70px', alignSelf: 'center'}} />
+              <div className='text'>{square.name}</div>
+            </motion.div>
+          </CardActionArea>  
+        </Card>  
       ));
     }
 
@@ -74,6 +81,18 @@ const CardSlider = () => {
             exit="exit"
         >
             <div className="card__header">
+              <Hidden mdUp> 
+                <div className="card__img-placeholder" style={{alignContent:'center',justifyContent:'center', display:'flex' }}>
+                  <motion.img 
+                    src={selectedSquare.icon} 
+                    alt='Web'  
+                    style={{width: '100px', alignSelf: 'center'}}
+                    animate={{
+                      x: [-20, 0]
+                    }}
+                  />
+                </div> 
+              </Hidden> 
               <h2>{selectedSquare.name}</h2>
               <motion.button 
                 animate={{
@@ -84,20 +103,24 @@ const CardSlider = () => {
                   <CloseIcon />
               </motion.button>
             </div>
-            <div className="card__content">
-              <div className="card__img-placeholder" style={{alignContent:'center',justifyContent:'center', display:'flex'}}>
-                <motion.img 
-                  src={selectedSquare.icon} 
-                  alt='Web'  
-                  style={{width: '100px', alignSelf: 'center'}}
-                  animate={{
-                    x: [-20, 0]
-                  }}
-                />
-              </div>
+            <div className="card__content" >
+              <Hidden mdDown> 
+                <div className="card__img-placeholder" style={{alignContent:'center',justifyContent:'center', display:'flex' }}>
+                  <motion.img 
+                    src={selectedSquare.icon} 
+                    alt='Web'  
+                    animate={{
+                      x: [-20, 0]
+                    }}
+                  />
+                </div> 
+              </Hidden>
               <div className="card__text-placeholder">
                   {selectedSquare.description}
               </div>
+            </div>
+            <div style={{width: '50vw',justifySelf:'center'}}>
+                <Carousel items={selectedSquare.technology}/>
             </div>
         </motion.div>
       )
