@@ -55,17 +55,17 @@ export default function App(props) {
         responsiveProps={[
           {
             itemsToShow: 2,
-            itemsToScroll: 2,
+            itemsToScroll: 1,
             minWidth: 450,
           },
           {
             itemsToShow: 3,
-            itemsToScroll: 2,
+            itemsToScroll: 1,
             minWidth: 900,
           },
           {
             itemsToShow: 4,
-            itemsToScroll: 2,
+            itemsToScroll: 1,
             minWidth: 1024,
           },
         ]}
