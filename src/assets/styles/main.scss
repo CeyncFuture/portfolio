@@ -5,9 +5,6 @@
 //pages
 
 //component
-@import "./partials/component/footer.scss";
-@import "./partials/component/navbar.scss";
-@import "./partials/component/footer.scss";
-@import "./partials/component/buttons.scss";
-@import "./partials/component/cardSlider.scss";
-@import "./partials/component/carousel.scss";
+@import "./partials/component/mui/navbar.scss";
+@import "./partials/component/custom/footer.scss";
+@import "./partials/component/mui/buttons.scss";

@@ -1,6 +1,6 @@
 import {motion} from 'framer-motion';
-import logo from '../assets/images/CeyncFuture-white.png'
-import {contactDetails} from "../utils/Constants";
+import logo from '../../../assets/images/CeyncFuture-white.png'
+import {contactDetails} from "../../../utils/Constants";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 const Footer = () => {

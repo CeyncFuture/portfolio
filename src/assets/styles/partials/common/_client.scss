@@ -1,7 +1,17 @@
 .client {
-
     .container{
         min-height: 100vh;
+        margin-top: 65px;
         overflow-y: hidden;
+        width: "100%";
+    }   
+}
+
+@media only screen and (max-width: 900px) {
+    .client {
+        .container{
+            margin-top: 50px;
+            width: "100%";
+        }
     }
 }
