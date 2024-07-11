@@ -2,6 +2,7 @@ import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 
 import bg_1 from "../../assets/images/background/bg_1.jpg";
+import RoundedButton from "../../components/buttons/elements/RoundedButton";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       <div
         style={{ height: "700px", backgroundColor: "red", width: "100%" }}
       >
-        
+        <RoundedButton />
       </div>
     </ParallaxBanner>
   );
