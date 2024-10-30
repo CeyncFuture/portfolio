@@ -1,0 +1,103 @@
+[debug] [2024-10-30T07:23:27.874Z] ----------------------------------------------------------------------
+[debug] [2024-10-30T07:23:27.876Z] Command:       /home/thilinamadushan/.nvm/versions/node/v18.19.1/bin/node /home/thilinamadushan/.nvm/versions/node/v18.19.1/bin/firebase deploy --only hosting
+[debug] [2024-10-30T07:23:27.877Z] CLI Version:   13.4.0
+[debug] [2024-10-30T07:23:27.877Z] Platform:      linux
+[debug] [2024-10-30T07:23:27.877Z] Node Version:  v18.19.1
+[debug] [2024-10-30T07:23:27.878Z] Time:          Wed Oct 30 2024 12:53:27 GMT+0530 (India Standard Time)
+[debug] [2024-10-30T07:23:27.878Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-30T07:23:27.945Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-30T07:23:27.946Z] > authorizing via signed-in user (technologiespyra@gmail.com)
+[debug] [2024-10-30T07:23:27.946Z] [iam] checking project ceyncfuture-574cc for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-10-30T07:23:27.947Z] > refreshing access token with scopes: []
+[debug] [2024-10-30T07:23:27.949Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-30T07:23:27.949Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:23:28.855Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-10-30T07:23:28.855Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:23:28.855Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions [none]
+[debug] [2024-10-30T07:23:28.856Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions x-goog-quota-user=projects/ceyncfuture-574cc
+[debug] [2024-10-30T07:23:28.856Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-30T07:23:30.902Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions 401
+[debug] [2024-10-30T07:23:30.902Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2024-10-30T07:23:30.903Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-10-30T07:23:30.904Z] > refreshing access token with scopes: []
+[debug] [2024-10-30T07:23:30.904Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-30T07:23:30.904Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:23:31.716Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-10-30T07:23:31.716Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:23:31.717Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ceyncfuture-574cc [none]
+[debug] [2024-10-30T07:23:32.743Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ceyncfuture-574cc 401
+[debug] [2024-10-30T07:23:32.743Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ceyncfuture-574cc {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-10-30T07:23:32.744Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
+[debug] [2024-10-30T07:25:25.873Z] ----------------------------------------------------------------------
+[debug] [2024-10-30T07:25:25.875Z] Command:       /home/thilinamadushan/.nvm/versions/node/v18.19.1/bin/node /home/thilinamadushan/.nvm/versions/node/v18.19.1/bin/firebase deploy --only hosting
+[debug] [2024-10-30T07:25:25.876Z] CLI Version:   13.4.0
+[debug] [2024-10-30T07:25:25.876Z] Platform:      linux
+[debug] [2024-10-30T07:25:25.876Z] Node Version:  v18.19.1
+[debug] [2024-10-30T07:25:25.902Z] Time:          Wed Oct 30 2024 12:55:25 GMT+0530 (India Standard Time)
+[debug] [2024-10-30T07:25:25.903Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-30T07:25:25.980Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-30T07:25:25.980Z] > authorizing via signed-in user (technologiespyra@gmail.com)
+[debug] [2024-10-30T07:25:25.981Z] [iam] checking project ceyncfuture-574cc for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-10-30T07:25:25.982Z] > refreshing access token with scopes: []
+[debug] [2024-10-30T07:25:25.984Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-30T07:25:25.984Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:25:26.618Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-10-30T07:25:26.618Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:25:26.618Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions [none]
+[debug] [2024-10-30T07:25:26.618Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions x-goog-quota-user=projects/ceyncfuture-574cc
+[debug] [2024-10-30T07:25:26.619Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-30T07:25:28.457Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions 401
+[debug] [2024-10-30T07:25:28.457Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2024-10-30T07:25:28.458Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-10-30T07:25:28.458Z] > refreshing access token with scopes: []
+[debug] [2024-10-30T07:25:28.458Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-30T07:25:28.458Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:25:29.068Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-10-30T07:25:29.068Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:25:29.069Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ceyncfuture-574cc [none]
+[debug] [2024-10-30T07:25:29.701Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ceyncfuture-574cc 401
+[debug] [2024-10-30T07:25:29.701Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ceyncfuture-574cc {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-10-30T07:25:29.701Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-10-30T07:25:34.706Z] Error: Timed out.
+    at Timeout._onTimeout (/home/thilinamadushan/.nvm/versions/node/v18.19.1/lib/node_modules/firebase-tools/lib/utils.js:258:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-30T07:26:56.657Z] ----------------------------------------------------------------------
+[debug] [2024-10-30T07:26:56.659Z] Command:       /home/thilinamadushan/.nvm/versions/node/v18.19.1/bin/node /home/thilinamadushan/.nvm/versions/node/v18.19.1/bin/firebase deploy --only hosting
+[debug] [2024-10-30T07:26:56.659Z] CLI Version:   13.4.0
+[debug] [2024-10-30T07:26:56.660Z] Platform:      linux
+[debug] [2024-10-30T07:26:56.660Z] Node Version:  v18.19.1
+[debug] [2024-10-30T07:26:56.660Z] Time:          Wed Oct 30 2024 12:56:56 GMT+0530 (India Standard Time)
+[debug] [2024-10-30T07:26:56.661Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-30T07:26:56.746Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-30T07:26:56.747Z] > authorizing via signed-in user (technologiespyra@gmail.com)
+[debug] [2024-10-30T07:26:56.747Z] [iam] checking project ceyncfuture-574cc for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-10-30T07:26:56.749Z] > refreshing access token with scopes: []
+[debug] [2024-10-30T07:26:56.750Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-30T07:26:56.751Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:26:57.344Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-10-30T07:26:57.344Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:26:57.344Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions [none]
+[debug] [2024-10-30T07:26:57.344Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions x-goog-quota-user=projects/ceyncfuture-574cc
+[debug] [2024-10-30T07:26:57.345Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-30T07:26:59.388Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions 401
+[debug] [2024-10-30T07:26:59.388Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceyncfuture-574cc:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2024-10-30T07:26:59.389Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-10-30T07:26:59.389Z] > refreshing access token with scopes: []
+[debug] [2024-10-30T07:26:59.389Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-30T07:26:59.389Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:27:00.206Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-10-30T07:27:00.206Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-30T07:27:00.207Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ceyncfuture-574cc [none]
+[debug] [2024-10-30T07:27:01.051Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ceyncfuture-574cc 401
+[debug] [2024-10-30T07:27:01.051Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ceyncfuture-574cc {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-10-30T07:27:01.051Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
