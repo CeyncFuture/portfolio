@@ -3,6 +3,7 @@ import ButtonBase from "@mui/material/ButtonBase";
 const RoundedButton = ( props ) => {
   return (
     <ButtonBase
+      {...props }
       sx={{
         borderRadius: 50,
         height: 50,
@@ -13,7 +14,6 @@ const RoundedButton = ( props ) => {
         },
       }}
     >
-      { props.children || "Button"}
     </ButtonBase>
   );
 };
