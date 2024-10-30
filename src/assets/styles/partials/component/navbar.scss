@@ -1,5 +1,19 @@
+@import "../../colors.scss";
+
 .navbar {
     height: 70px;
+
+    header{
+        background-color: $nav-background;
+        color: $nav-text;
+
+        .css-1q39md6-MuiButtonBase-root-MuiButton-root{
+            color: $nav-text;
+        }
+        .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+            color: $nav-text;
+        }
+    }
 
     @media (max-width: 900px){
         height: 60px;
@@ -10,3 +24,10 @@
     }
 }
 
+.MuiMenu-paper{
+    li{
+        p{
+            color: $nav-text;
+        }
+    }
+}

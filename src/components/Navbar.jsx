@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-import Logo from '../assets/images/ceyncFuture_White_LogoOnly.png'
+import Logo from '../assets/images/CeyncFuture-light.png'
 
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
     };
   
     return(
-        <div className = "navbar">
+        <div className = "navbar" >
             <AppBar position="fixed">
               <Container maxWidth="xl">
                 <Toolbar disableGutters>

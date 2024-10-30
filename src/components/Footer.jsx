@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion';
-import logo from '../assets/images/CeyncFuture-white.png'
+import logo from '../assets/images/CeyncFuture-light.png'
 import {contactDetails} from "../utils/Constants";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
