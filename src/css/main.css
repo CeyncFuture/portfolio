@@ -475,9 +475,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-10 {
   z-index: 10;
 }
-.float-right {
-  float: right;
-}
 .m-4 {
   margin: 1rem;
 }
@@ -915,6 +912,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
+.text-quaternary-dark {
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138 / var(--tw-text-opacity));
+}
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
@@ -1210,6 +1211,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 66.666667%;
   }
 
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
   .sm\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1298,6 +1303,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:pt-0 {
     padding-top: 0px;
+  }
+
+  .sm\:text-left {
+    text-align: left;
   }
 
   .sm\:text-xl {
