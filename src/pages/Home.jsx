@@ -3,14 +3,17 @@ import AppBanner from '../components/shared/AppBanner';
 import ProjectsGrid from '../components/projects/ProjectsGrid';
 import { ProjectsProvider } from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
+import TechSlider from '../components/TechSlider';
+import { techIcons } from '../data/sliders';
 
 const Home = () => {
 	return (
 		<div className="container mx-auto">
-			<AppBanner></AppBanner>
+			<AppBanner />
+			<TechSlider techIcons={techIcons}/>
 
 			<ProjectsProvider>
-				<ProjectsGrid></ProjectsGrid>
+				<ProjectsGrid />
 			</ProjectsProvider>
 
 			<div className="mt-8 sm:mt-10 flex justify-center">

@@ -13,6 +13,7 @@ module.exports = {
 				'primary-dark': '#0D2438',
 				'secondary-dark': '#102D44',
 				'ternary-dark': '#1E3851',
+				'quaternary-dark': '#1E3A8A'
 			},
 			container: {
 				padding: {
