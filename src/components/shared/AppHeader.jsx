@@ -42,7 +42,7 @@ const AppHeader = () => {
 			id="nav"
 			className="sm:container sm:mx-auto"
 		>
-			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
+			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-4">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
@@ -131,7 +131,7 @@ const AppHeader = () => {
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<span
 							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
+							className="font-general-variable sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
 							aria-label="Hire Me Button"
 						>
 							<Button title="Hire Us" />
