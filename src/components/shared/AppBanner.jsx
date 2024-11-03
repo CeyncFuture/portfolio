@@ -25,8 +25,8 @@ const AppBanner = () => {
           className="w-full sm:w-1/2 text-center sm:text-left"
         >
           <h1
-            className=" text-quaternary-dark  dark:text-primary-light"
-            style={{ fontSize: "2.5rem", fontWeight: "bold" }}
+            className=" text-quaternary-dark  dark:text-primary-light text-2xl md:text-3xl"
+            style={{ fontWeight: "bold" }}
           >
             Syncing the Future with Innovative Software
           </h1>
