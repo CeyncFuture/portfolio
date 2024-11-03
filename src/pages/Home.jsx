@@ -28,7 +28,6 @@ const Home = () => {
 							title={project.title}
 							desc={project.desc}
 							imgUrl={project.img}
-							isSwitched={index%2}
 						/>
 					)
 				}

@@ -1,22 +1,32 @@
 import Button from "../reusable/Button";
 import {Link} from "react-router-dom";
 
-const ProjectCard = ({id, categories, title, desc, imgUrl, isSwitched}) => {
+const ProjectCard = ({id, categories, title, desc, imgUrl}) => {
     return (
-        <div className={`project-card ${isSwitched && 'switched'}`}>
-            <img className="image" src={imgUrl} alt={title} />
-            <div className="content">
-                <div className="chip-container">
-                    {categories.map((category, index) => <h1 key={index} className="chip">{category}</h1>)}
+        <div className='flex mb-4 items-center'>
+            <div className="mx-2" style={{minWidth: '450px'}}>
+                <img src={imgUrl}  className="rounded-xl border-none" alt={title}/>
+            </div>
+            <div className="p-6">
+                <div className="mb-3">
+                    {categories.map((category, index) =>
+                        <h1
+                            key={index}
+                            className="bg-indigo-500 font-bold text-white p-3 rounded-md"
+                            style={{ width: "fit-content"}}
+                        >
+                            {category}
+                        </h1>
+                    )}
                 </div>
-                <h1 className="title">{title}</h1>
-                <p className="desc">{desc}</p>
+                <h1 className="font-general-medium text-lg font-bold md:text-xl text-ternary-dark dark:text-ternary-light mb-2">{title}</h1>
+                <p className="text-lg text-ternary-dark dark:text-ternary-light mb-3">{desc}</p>
                 <Link
                     to={`/project/${id}`}
-                    className="font-general-medium flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300"
+                    className="font-general-medium rounded-lg focus:ring-1 focus:ring-indigo-900 text-ternary-dark text-lg sm:text-md duration-300"
                     aria-label="Learn More"
                 >
-                    <Button title="Learn More" />
+                    <Button title="Learn More..."/>
                 </Link>
             </div>
         </div>
