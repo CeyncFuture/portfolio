@@ -5,8 +5,11 @@ import { ProjectsProvider } from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
 import TechSlider from '../components/TechSlider';
 import { techIcons } from '../data/sliders';
+import {projectsData2} from "../data/projects";
+import ProjectCard from "../components/projects/ProjectCard";
 
 const Home = () => {
+
 	return (
 		<div className="container mx-auto">
 			<AppBanner />
@@ -15,6 +18,21 @@ const Home = () => {
 			<ProjectsProvider>
 				<ProjectsGrid />
 			</ProjectsProvider>
+
+			<div className="projects">
+				{
+					projectsData2.map((project, index) =>
+						<ProjectCard
+							id={project.id}
+							categories={project.categories}
+							title={project.title}
+							desc={project.desc}
+							imgUrl={project.img}
+							isSwitched={index%2}
+						/>
+					)
+				}
+			</div>
 
 			<div className="mt-8 sm:mt-10 flex justify-center">
 				<Link
