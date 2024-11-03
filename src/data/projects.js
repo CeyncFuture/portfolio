@@ -49,3 +49,48 @@ export const projectsData = [
 		img: WebImage1,
 	},
 ];
+
+export const projectsData2 = [
+	{
+		id: 1,
+		title: 'Google Health Platform',
+		categories: ['Web Application'],
+		desc: "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
+		imgUrl: WebImage2
+	},
+	{
+		id: 2,
+		title: 'Phoenix Digital Agency',
+		categories: ['Mobile Application'],
+		desc: "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
+		img: MobileImage2,
+	},
+	{
+		id: 3,
+		title: 'Project Management UI',
+		categories: ['UI/UX Design'],
+		desc: "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
+		img: UIImage1,
+	},
+	{
+		id: 4,
+		title: 'Cloud Storage Platform',
+		categories: ['UI/UX Design'],
+		desc: "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
+		img: UIImage2,
+	},
+	{
+		id: 5,
+		title: 'React Social App',
+		categories: ['Mobile Application'],
+		desc: "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
+		img: MobileImage1,
+	},
+	{
+		id: 6,
+		title: 'Apple Design System',
+		categories: ['Web Application'],
+		desc: "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
+		img: WebImage1,
+	},
+];
