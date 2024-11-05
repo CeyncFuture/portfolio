@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import * as Scroll from "react-scroll";
 import { notifyError, notifySuccess, sendEmail } from "../../functions/common";
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import HireMeModal from '../HireMeModal';
@@ -9,11 +10,14 @@ import logoDark from '../../images/logo-dark.png';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
 
+// Set up scroll link with react-scroll
+const ScrollLink = Scroll.Link;
+
 const AppHeader = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
-
+	
 	function toggleMenu() {
 		if (!showMenu) {
 			setShowMenu(true);
@@ -128,7 +132,7 @@ const AppHeader = () => {
 							: 'hidden'
 					}
 				>
-					<a
+					{/* <a
 						href="#projects"
 						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Projects"
@@ -148,7 +152,37 @@ const AppHeader = () => {
 						aria-label="Contact"
 					>
 						Contact
-					</a>
+					</a> */}
+					<ScrollLink
+						to="projects"
+						smooth={true}
+						duration={500}
+						offset={-50}
+						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						aria-label="Projects"
+					>
+						Projects
+					</ScrollLink>
+					<ScrollLink
+						to="about"
+						smooth={true}
+						duration={500}
+						offset={-50}
+						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						aria-label="About Us"
+					>
+						About Us
+					</ScrollLink>
+					<ScrollLink
+						to="contact"
+						smooth={true}
+						duration={500}
+						offset={-50}
+						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						aria-label="Contact"
+					>
+						Contact
+					</ScrollLink>
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<span
 							onClick={showHireMeModal}
@@ -162,7 +196,7 @@ const AppHeader = () => {
 
 				{/* Header links large screen */}
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-					<a
+					{/* <a
 						href="#projects"
 						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Projects"
@@ -182,7 +216,37 @@ const AppHeader = () => {
 						aria-label="Contact"
 					>
 						Contact
-					</a>
+					</a> */}
+					<ScrollLink
+						to="projects"
+						smooth={true}
+						duration={500}
+						offset={-50}
+						className="text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4"
+						aria-label="Projects"
+					>
+						Projects
+					</ScrollLink>
+					<ScrollLink
+						to="about"
+						smooth={true}
+						duration={500}
+						offset={-50}
+						className="text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4"
+						aria-label="About Us"
+					>
+						About Us
+					</ScrollLink>
+					<ScrollLink
+						to="contact"
+						smooth={true}
+						duration={500}
+						offset={-50}
+						className="text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4"
+						aria-label="Contact"
+					>
+						Contact
+					</ScrollLink>
 				</div>
 
 				{/* Header right section buttons */}
