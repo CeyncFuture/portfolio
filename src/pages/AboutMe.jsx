@@ -3,6 +3,7 @@ import AboutCounter from '../components/about/AboutCounter';
 import AboutClients from '../components/about/AboutClients';
 import { AboutMeProvider } from '../context/AboutMeContext';
 import { motion } from 'framer-motion';
+import {people} from "../data/projects";
 
 const About = () => {
 	return (

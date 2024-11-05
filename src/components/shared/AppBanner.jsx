@@ -1,11 +1,50 @@
+import {useState} from "react";
 import useThemeSwitcher from "../../hooks/useThemeSwitcher";
-import { FiArrowDownCircle } from "react-icons/fi";
+import { notifyError, notifySuccess, sendEmail } from "../../functions/common";
 import developerLight from "../../images/developer.svg";
 import developerDark from "../../images/developer-dark.svg";
 import { motion } from "framer-motion";
+import HireMeModal from "../HireMeModal";
+import Button from "../reusable/Button";
 
 const AppBanner = () => {
   const [activeTheme] = useThemeSwitcher();
+
+  const [showModal, setShowModal] = useState(false);
+
+	function showHireMeModal() {
+		if (!showModal) {
+			document
+				.getElementsByTagName('html')[0]
+				.classList.add('overflow-y-hidden');
+			setShowModal(true);
+		} else {
+			document
+				.getElementsByTagName('html')[0]
+				.classList.remove('overflow-y-hidden');
+			setShowModal(false);
+		}
+	}
+
+  function requestSend(e) {
+		e.preventDefault();
+		const formData = {
+		  name: e.target.name.value,
+		  email: e.target.email.value,
+		  subject: e.target.subject.value,
+		  message: e.target.message.value,
+		};
+		try {
+		  sendEmail(formData);
+		  e.target.reset();
+		  notifySuccess("Email sent successfully!")
+		} catch (error) {
+		  notifyError("Failed to send email. Please try again!")
+		  throw error;
+		}
+	  
+		showHireMeModal();
+	}
 
   return (
     <div>
@@ -38,6 +77,15 @@ const AppBanner = () => {
             cutting-edge technology and agile development, empowering businesses
             to adapt and thrive in an ever-evolving landscape.
           </p>
+          {/* <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+						<span
+							onClick={showHireMeModal}
+							className="font-general-variable block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
+							aria-label="Hire Me Button"
+						>
+							<Button title="Hire Us" />
+						</span>
+					</div> */}
         </motion.div>
 
         {/* Right image content */}
@@ -54,6 +102,16 @@ const AppBanner = () => {
           />
         </motion.div>
       </motion.section>
+      			{/* Hire me modal */}
+			<div>
+				{showModal ? (
+					<HireMeModal
+						onClose={showHireMeModal}
+						onRequest={requestSend}
+					/>
+				) : null}
+				{showModal ? showHireMeModal : null}
+			</div>
     </div>
   );
 };
