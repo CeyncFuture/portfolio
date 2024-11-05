@@ -578,6 +578,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
+.flexWrap{
+  flex-wrap: wrap;
+}
 .grid {
   display: grid;
 }
