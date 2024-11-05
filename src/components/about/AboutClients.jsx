@@ -46,7 +46,7 @@ const AboutClients = () => {
 		  </p>
 	
 		  {/* Team Members */}
-		  <div className="flex flex-col md:flex-row justify-center gap-12">
+		  <div className="flex flex-wrap justify-center gap-12">
 			{teamMembers.map((member, index) => (
 			  <div key={index} className="flex flex-col items-center text-center mx-5 ">
 				<img
