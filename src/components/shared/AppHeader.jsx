@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { notifyError, notifySuccess, sendEmail } from "../../functions/common";
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import HireMeModal from '../HireMeModal';
 import logoLight from '../../images/logo-light.png';
@@ -33,6 +34,26 @@ const AppHeader = () => {
 				.classList.remove('overflow-y-hidden');
 			setShowModal(false);
 		}
+	}
+
+	function requestSend(e) {
+		e.preventDefault();
+		const formData = {
+		  name: e.target.name.value,
+		  email: e.target.email.value,
+		  subject: e.target.subject.value,
+		  message: e.target.message.value,
+		};
+		try {
+		  sendEmail(formData);
+		  e.target.reset();
+		  notifySuccess("Email sent successfully!")
+		} catch (error) {
+		  notifyError("Failed to send email. Please try again!")
+		  throw error;
+		}
+	  
+		showHireMeModal();
 	}
 
 	return (
@@ -195,7 +216,7 @@ const AppHeader = () => {
 				{showModal ? (
 					<HireMeModal
 						onClose={showHireMeModal}
-						onRequest={showHireMeModal}
+						onRequest={requestSend}
 					/>
 				) : null}
 				{showModal ? showHireMeModal : null}
