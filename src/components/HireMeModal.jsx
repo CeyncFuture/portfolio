@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
-import { notifyError, notifySuccess, sendEmail } from "../functions/common";
 
 const selectOptions = [
 	'Web Application',

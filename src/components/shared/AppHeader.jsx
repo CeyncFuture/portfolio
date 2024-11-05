@@ -37,8 +37,6 @@ const AppHeader = () => {
 	}
 
 	function requestSend(e) {
-		console.log("44444444444444444444444444444444444");
-		debugger
 		e.preventDefault();
 		const formData = {
 		  name: e.target.name.value,
