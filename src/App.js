@@ -1,11 +1,13 @@
-import { AnimatePresence } from 'framer-motion';
-import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
-import AppFooter from './components/shared/AppFooter';
-import AppHeader from './components/shared/AppHeader';
-import './css/App.css';
-import UseScrollToTop from './hooks/useScrollToTop';
+import { AnimatePresence } from "framer-motion";
+import { lazy, Suspense } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import UseScrollToTop from "./hooks/useScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
+import AppFooter from "./components/shared/AppFooter";
+import AppHeader from "./components/shared/AppHeader";
+import "./css/App.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 // const About = lazy(() => import('./pages/AboutMe'));
 // const Contact = lazy(() => import('./pages/Contact.jsx'));
@@ -34,8 +36,10 @@ function App() {
 				</Router>
 				<UseScrollToTop />
 			</div>
+			<ToastContainer />
 		</AnimatePresence>
 	);
 }
+
 
 export default App;
