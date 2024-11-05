@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
+import { notifyError, notifySuccess, sendEmail } from "../functions/common";
 
 const selectOptions = [
 	'Web Application',
@@ -10,6 +11,7 @@ const selectOptions = [
 ];
 
 const HireMeModal = ({ onClose, onRequest }) => {
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -38,7 +40,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 						<div className="modal-body p-5 w-full h-full">
 							<form
 								onSubmit={(e) => {
-									e.preventDefault();
+									onRequest(e);
 								}}
 								className="max-w-xl m-4 text-left"
 							>
@@ -98,7 +100,6 @@ const HireMeModal = ({ onClose, onRequest }) => {
 
 								<div className="mt-6 pb-4 sm:pb-1">
 									<span
-										onClick={onClose}
 										type="submit"
 										className="px-4
 											sm:px-6
