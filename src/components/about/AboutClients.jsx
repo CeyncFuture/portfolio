@@ -4,6 +4,7 @@ import AboutClientSingle from './AboutClientSingle';
 import background from '../../images/profileBackground.png';
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
+import ThilinaDP from "../../images/profileImages/thilina.png"
 
 const AboutClients = () => {
  const { clientsData, clientsHeading } = useContext(AboutMeContext);
@@ -12,7 +13,7 @@ const AboutClients = () => {
   {
     name: "Pacha sajith",
     role: "Copywriter",
-    image: "https://picsum.photos/id/1/200/200",
+    image: ThilinaDP,
     twitter: "#",
     linkedin: "#",
   },
