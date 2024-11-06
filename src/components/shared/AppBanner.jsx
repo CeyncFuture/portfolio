@@ -54,7 +54,7 @@ const AppBanner = () => {
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
         className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2 px-6"
-        style={{ padding: "40px 0" }}
+        style={{ padding: "2px 0" }}
       >
         {/* Left text content */}
         <motion.div
