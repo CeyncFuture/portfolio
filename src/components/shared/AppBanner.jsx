@@ -67,24 +67,45 @@ const AppBanner = () => {
             className=" text-quaternary-dark  dark:text-primary-light text-2xl md:text-3xl"
             style={{ fontWeight: "bold" }}
           >
-            Strategic Software Solutions, Engineered to Fuel Your Growth and Success
-
+            Strategic Software Solutions, Engineered to Fuel Your Growth and
+            Success
           </h1>
           <p
             className=" text-ternary-dark  dark:text-primary-light"
             style={{ fontSize: "1.2rem", marginTop: "10px" }}
           >
-            At CeyncFuture, we help your business grow with the latest technology and customized solutions, focused on your success in a fast-changing digital world.
+            At CeyncFuture, we help your business grow with the latest
+            technology and customized solutions, focused on your success in a
+            fast-changing digital world.
           </p>
+          {/* <motion.div
+            initial={{ opacity: 1 }}
+            whileHover={{
+              scale: 1.2,
+              transition: { duration: 0.5 },
+            }}
+          > */}
           <div className="md:flex mt-10">
-            <span
+            {/* <span
+                onClick={showHireMeModal}
+                className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
+                aria-label="Hire Me Button"
+              > */}
+            <motion.div
+              initial={{ opacity: 1 }}
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.2 },
+              }}
               onClick={showHireMeModal}
               className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
               aria-label="Hire Me Button"
             >
               <Button title="Get started" />
-            </span>
+            </motion.div>
+            {/* </span> */}
           </div>
+          {/* </motion.div> */}
         </motion.div>
 
         {/* Right image content */}

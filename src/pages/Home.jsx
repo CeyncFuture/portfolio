@@ -10,13 +10,18 @@ import ProjectCard from "../components/projects/ProjectCard";
 import About from "./AboutMe";
 import Contact from "./Contact";
 
+import kk from "../images/divider.svg";
+
 const Home = () => {
 
 	return (
 		<div className="container mx-auto">
 			<AppBanner />
-			<TechSlider techIcons={techIcons}/>
 
+			<TechSlider techIcons={techIcons}/>
+			<div className='w-full'>
+				<img src={kk} alt='dsdsd' className='w-full'/>
+			</div>
 			{/*<ProjectsProvider>
 				<ProjectsGrid />
 			</ProjectsProvider>*/}
