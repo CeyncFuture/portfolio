@@ -5,13 +5,12 @@ import AppBanner from '../components/shared/AppBanner';
 import Button from '../components/reusable/Button';
 import TechSlider from '../components/TechSlider';
 import { techIcons } from '../data/sliders';
-import {projectsData2} from "../data/projects";
 import ProjectCard from "../components/projects/ProjectCard";
 import About from "./AboutMe";
 import Contact from "./Contact";
+import {projects} from "../data/project";
 
 const Home = () => {
-
 	return (
 		<div className="container mx-auto">
 			<AppBanner />
@@ -28,15 +27,8 @@ const Home = () => {
 					</p>
 				</div>
 				{
-					projectsData2.map((project, index) =>
-						<ProjectCard
-							id={project.id}
-							categories={project.categories}
-							title={project.title}
-							desc={project.desc}
-							imgUrl={project.img}
-							isLeftAligned={index % 2 === 0}
-						/>
+					projects.map((project, index) =>
+						<ProjectCard key={index} data={project} isLeftAligned={index % 2 === 0}/>
 					)
 				}
 			</div>
