@@ -17,3 +17,9 @@
     opacity: .2;
     color: var(--primary-dark);
 }
+
+#root > div.bg-secondary-light.dark\:bg-primary-dark.transition.duration-300 > div:nth-child(2) > div.slick-slider.slick-initialized{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
