@@ -4,7 +4,8 @@ import "../css/reactSlick.css";
 
 const TechSlider = ({ techIcons }) => {
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -23,7 +24,6 @@ const TechSlider = ({ techIcons }) => {
       },
     ],
   };
-
   return (
     <Slider {...settings}>
       {techIcons.map((icon, index) => (

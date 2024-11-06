@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import useThemeSwitcher from "../../hooks/useThemeSwitcher";
 import { notifyError, notifySuccess, sendEmail } from "../../functions/common";
 import developerLight from "../../images/developer.svg";
@@ -12,39 +12,39 @@ const AppBanner = () => {
 
   const [showModal, setShowModal] = useState(false);
 
-	function showHireMeModal() {
-		if (!showModal) {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.add('overflow-y-hidden');
-			setShowModal(true);
-		} else {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.remove('overflow-y-hidden');
-			setShowModal(false);
-		}
-	}
+  function showHireMeModal() {
+    if (!showModal) {
+      document
+        .getElementsByTagName("html")[0]
+        .classList.add("overflow-y-hidden");
+      setShowModal(true);
+    } else {
+      document
+        .getElementsByTagName("html")[0]
+        .classList.remove("overflow-y-hidden");
+      setShowModal(false);
+    }
+  }
 
   function requestSend(e) {
-		e.preventDefault();
-		const formData = {
-		  name: e.target.name.value,
-		  email: e.target.email.value,
-		  subject: e.target.subject.value,
-		  message: e.target.message.value,
-		};
-		try {
-		  sendEmail(formData);
-		  e.target.reset();
-		  notifySuccess("Email sent successfully!")
-		} catch (error) {
-		  notifyError("Failed to send email. Please try again!")
-		  throw error;
-		}
-	  
-		showHireMeModal();
-	}
+    e.preventDefault();
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    };
+    try {
+      sendEmail(formData);
+      e.target.reset();
+      notifySuccess("Email sent successfully!");
+    } catch (error) {
+      notifyError("Failed to send email. Please try again!");
+      throw error;
+    }
+
+    showHireMeModal();
+  }
 
   return (
     <div>
@@ -67,25 +67,45 @@ const AppBanner = () => {
             className=" text-quaternary-dark  dark:text-primary-light text-2xl md:text-3xl"
             style={{ fontWeight: "bold" }}
           >
-            Syncing the Future with Innovative Software
+            Strategic Software Solutions, Engineered to Fuel Your Growth and
+            Success
           </h1>
           <p
             className=" text-ternary-dark  dark:text-primary-light"
             style={{ fontSize: "1.2rem", marginTop: "10px" }}
           >
-            At CeyncFuture, we accelerate your digital transformation through
-            cutting-edge technology and agile development, empowering businesses
-            to adapt and thrive in an ever-evolving landscape.
+            At CeyncFuture, we help your business grow with the latest
+            technology and customized solutions, focused on your success in a
+            fast-changing digital world.
           </p>
-          {/* <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-						<span
-							onClick={showHireMeModal}
-							className="font-general-variable block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
-							aria-label="Hire Me Button"
-						>
-							<Button title="Hire Us" />
-						</span>
-					</div> */}
+          {/* <motion.div
+            initial={{ opacity: 1 }}
+            whileHover={{
+              scale: 1.2,
+              transition: { duration: 0.5 },
+            }}
+          > */}
+          <div className="md:flex mt-10">
+            {/* <span
+                onClick={showHireMeModal}
+                className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
+                aria-label="Hire Me Button"
+              > */}
+            <motion.div
+              initial={{ opacity: 1 }}
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.2 },
+              }}
+              onClick={showHireMeModal}
+              className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
+              aria-label="Hire Me Button"
+            >
+              <Button title="Get started" />
+            </motion.div>
+            {/* </span> */}
+          </div>
+          {/* </motion.div> */}
         </motion.div>
 
         {/* Right image content */}
@@ -102,16 +122,13 @@ const AppBanner = () => {
           />
         </motion.div>
       </motion.section>
-      			{/* Hire me modal */}
-			<div>
-				{showModal ? (
-					<HireMeModal
-						onClose={showHireMeModal}
-						onRequest={requestSend}
-					/>
-				) : null}
-				{showModal ? showHireMeModal : null}
-			</div>
+      {/* Hire me modal */}
+      <div>
+        {showModal ? (
+          <HireMeModal onClose={showHireMeModal} onRequest={requestSend} />
+        ) : null}
+        {showModal ? showHireMeModal : null}
+      </div>
     </div>
   );
 };
