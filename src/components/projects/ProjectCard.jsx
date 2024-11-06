@@ -4,7 +4,7 @@
 const ProjectCard = ({id, categories, title, desc, imgUrl, isLeftAligned}) => {
   const alignment = isLeftAligned ? 'flex-row' : 'flex-row-reverse';
     return (
-        <div className={`flex flexWrap justify-center mb-4 items-center ${alignment}`}>
+        <div className={`flex flex-wrap justify-center mb-4 items-center ${alignment}`}>
             <div className="mx-2" style={{maxWidth: '300px'}}>
                 <img src={imgUrl}  className="rounded-xl border-none" alt={title}/>
             </div>
