@@ -8,6 +8,7 @@ import {
 import AppFooterCopyright from './AppFooterCopyright';
 import Modal from "../reusable/Modal";
 import PrivacyPolicy from "../../pages/PrivacyPolicy";
+import TermsOfUse from "../../pages/TermsOfUse";
 
 const socialLinks = [
 	{
@@ -65,6 +66,13 @@ const AppFooter = () => {
 					button="Privacy Policy"
 					header="Privacy Policy"
 					body={<PrivacyPolicy/>}
+					id="privacy"
+				/>
+				<Modal
+					button="Terms of Use"
+					header="Terms of Use"
+					body={<TermsOfUse/>}
+					id="terms"
 				/>
 				<AppFooterCopyright />
 			</div>
