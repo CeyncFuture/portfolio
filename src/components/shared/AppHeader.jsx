@@ -3,20 +3,18 @@ import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import * as Scroll from "react-scroll";
 import { notifyError, notifySuccess, sendEmail } from "../../functions/common";
-import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import HireMeModal from '../HireMeModal';
 import logoLight from '../../images/logo-light.png';
 import logoDark from '../../images/logo-dark.png';
 import { motion } from 'framer-motion';
-import Button from '../reusable/Button';
+
 
 // Set up scroll link with react-scroll
 const ScrollLink = Scroll.Link;
 
-const AppHeader = () => {
+const AppHeader = ({activeTheme, setTheme}) => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
-	const [activeTheme, setTheme] = useThemeSwitcher();
 	
 	function toggleMenu() {
 		if (!showMenu) {
