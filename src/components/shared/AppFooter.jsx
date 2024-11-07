@@ -6,6 +6,8 @@ import {
 	FiFacebook,
 } from 'react-icons/fi';
 import AppFooterCopyright from './AppFooterCopyright';
+import Modal from "../reusable/Modal";
+import PrivacyPolicy from "../../pages/PrivacyPolicy";
 
 const socialLinks = [
 	{
@@ -59,7 +61,11 @@ const AppFooter = () => {
 						))}
 					</ul>
 				</div>
-
+				<Modal
+					button="Privacy Policy"
+					header="Privacy Policy"
+					body={<PrivacyPolicy/>}
+				/>
 				<AppFooterCopyright />
 			</div>
 		</div>
