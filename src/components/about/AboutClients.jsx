@@ -42,12 +42,12 @@ const AboutClients = () => {
    ];
 
    return (
-  <section className="text-center py-12 mt-10">
+  <section className="text-center py-12">
     {/* Title and Description */}
-    <h2 className=" text-primary-dark dark:text-primary-light text-2xl font-semibold mb-2">Meet our leadership</h2>
-    <p className="text-gray-600 dark:text-primary-light max-w-xl mx-auto mb-12">
-   We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.
-    </p>
+   {/* <h2 className=" text-primary-dark dark:text-primary-light text-2xl font-semibold mb-2">Meet our leadership</h2>*/}
+   {/* <p className="text-gray-600 dark:text-primary-light max-w-xl mx-auto mb-12">*/}
+   {/*We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.*/}
+   {/* </p>*/}
 
     {/* Team Members */}
     <div className="flex flex-wrap justify-center gap-4">

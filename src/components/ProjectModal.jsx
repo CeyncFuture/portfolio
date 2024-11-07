@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {FiX} from "react-icons/fi";
 
 const ProjectModal = ({data, onClose}) => {
-    const {title, category, desc, images, technologies} = data;
+    const {title, categories, desc, images, technologies} = data;
     const [isWrapped, setIsWrapped] = useState(false);
 
     useEffect(() => {
@@ -50,19 +50,25 @@ const ProjectModal = ({data, onClose}) => {
                 >
                     <div>
                         <h5 style={{fontSize: "24px", marginBottom: "10px"}}>{title}</h5>
-                        <span
-                            style={{
-                                fontSize: "14px",
-                                color: "#fff",
-                                background: "linear-gradient(135deg, #ff7e5f, #feb47b)",
-                                padding: "5px 15px",
-                                borderRadius: "20px",
-                                fontWeight: "bold",
-                                textTransform: "uppercase",
-                            }}
-                        >
-                          {category}
-                        </span>
+                        <div className="flex flex-wrap gap-3">
+                            {
+                                categories.map(category =>
+                                        <span
+                                            style={{
+                                                fontSize: "14px",
+                                                color: "#fff",
+                                                background: "linear-gradient(135deg, #ff7e5f, #feb47b)",
+                                                padding: "5px 15px",
+                                                borderRadius: "20px",
+                                                fontWeight: "bold",
+                                                textTransform: "uppercase",
+                                            }}
+                                        >
+                                      {category}
+                                </span>
+                                )
+                            }
+                        </div>
                     </div>
                     <button onClick={onClose} style={{fontSize: "24px", padding: "10px"}}>
                         <FiX/>
