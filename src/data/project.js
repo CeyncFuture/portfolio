@@ -13,7 +13,7 @@ import Medec07 from '../images/projects/Medec/07.jpeg';
 export const projects = [
     {
         title: 'Top Tutors Global: A Secure Tutoring Platform for Student Engagements',
-        category: 'Web Application',
+        categories: ['Web Application'],
         desc: "Top Tutors Global is an educational platform where students can connect with tutors for tailored learning support. Key features include secure user authorization and authentication, email verification with OTP, student question submissions, and a streamlined tutor registration process.",
         images: [
             Tutor01,
@@ -33,7 +33,7 @@ export const projects = [
     },
     {
         title: 'Full-Stack Healthcare Management Platform',
-        category: 'Web Application',
+        categories: ['Web Application', 'Mobile Application'],
         desc: "The system offers secure access with role-specific permissions, allowing patients to manage their own medical history, doctors to view and update records, and admins to oversee the platform. Login is secured with options such as Google or Facebook for ease of access. A real-time patient count feature helps manage hospital capacity, particularly in emergencies. Patients can also find doctors, book appointments, and receive notifications about upcoming visits. Additionally, patients have the ability to view and securely manage their health records, while receiving alerts for appointments, medications, and important health updates.",
         images: [
             Medec01,
