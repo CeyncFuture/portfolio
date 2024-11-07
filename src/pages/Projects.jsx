@@ -17,7 +17,7 @@ const Projects = () => {
 				</div>
 				{
 					projects.map((project, index) =>
-						<ProjectCard key={index} data={project} isLeftAligned={index % 2 === 0} onSelect={setSelected}/>
+						<ProjectCard key={index} data={project} isLeftAligned={index % 2 === 0} onSelect={setSelected} />
 					)
 				}
 			</div>
