@@ -2526,3 +2526,7 @@ input:checked + .toggle-bg {
     max-width: 1280px;
   }
 }
+
+.footer-bg{
+  background-color: #f7f7f7;
+}
