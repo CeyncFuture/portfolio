@@ -1,6 +1,6 @@
 import {useState} from "react";
-import Button from "../reusable/Button";
-import ProjectModal from "../ProjectModal";
+import Button from "../components/reusable/Button";
+import ProjectModal from "../components/ProjectModal";
 
 const ProjectCard = ({data, isLeftAligned}) => {
     const { title, category, desc, images } = data;
@@ -9,7 +9,7 @@ const ProjectCard = ({data, isLeftAligned}) => {
 
     return (
         <div className={`flex flex-wrap justify-center mb-4 items-center ${alignment}`}>
-            <div className="mx-2" style={{maxWidth: '400px'}}>
+            <div className="mx-2" style={{maxWidth: '400px', cursor: 'pointer'}} onClick={() => setSelected(data)}>
                 <img src={images[0]}  className="rounded-xl border-none" alt={title}/>
             </div>
             <div className="p-6" style={{maxWidth: '600px'}}>
