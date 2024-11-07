@@ -8,6 +8,7 @@ import AppFooter from "./components/shared/AppFooter";
 import AppHeader from "./components/shared/AppHeader";
 import "./css/App.css";
 import 'react-toastify/dist/ReactToastify.css';
+import useThemeSwitcher from "./hooks/useThemeSwitcher.jsx";
 
 // const About = lazy(() => import('./pages/AboutMe'));
 // const Contact = lazy(() => import('./pages/Contact.jsx'));
@@ -17,12 +18,14 @@ const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 
 
 function App() {
+	const [activeTheme, setTheme] = useThemeSwitcher();
+
 	return (
 		<AnimatePresence>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<Router>
 					<ScrollToTop />
-					<AppHeader />
+					<AppHeader activeTheme={activeTheme} setTheme={setTheme}/>
 					<Suspense fallback={""}>
 						<Routes>
 							<Route path="/" element={<Home />} />
@@ -32,7 +35,7 @@ function App() {
 							/>
 						</Routes>
 					</Suspense>
-					<AppFooter />
+					<AppFooter activeTheme={activeTheme}/>
 				</Router>
 				<UseScrollToTop />
 			</div>
