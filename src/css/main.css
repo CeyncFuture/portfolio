@@ -1945,7 +1945,7 @@ input:checked + .toggle-bg {
 
 .focus\:ring-gray-200:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(13 36 56 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-blue-300:focus {
