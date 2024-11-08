@@ -1,14 +1,14 @@
 import Modal from "../components/reusable/Modal";
 import ProjectContent from "./ProjectContent";
 
-const ProjectCard = ({data, isLeftAligned, onSelect}) => {
+const ProjectCard = ({data, isLeftAligned}) => {
     const {id, title, categories, technologies, desc, images} = data;
 
     const alignment = isLeftAligned ? 'flex-row' : 'flex-row-reverse';
 
     return (
         <div className={`flex flex-wrap justify-center mb-4 items-center ${alignment}`}>
-            <div className="mx-2" style={{maxWidth: '400px', cursor: 'pointer'}} onClick={() => onSelect(data)}>
+            <div className="mx-2" style={{maxWidth: '400px'}}>
                 <img src={images[0]} className="rounded-xl border-none" alt={title}/>
             </div>
             <div className="p-6" style={{maxWidth: '600px'}}>
