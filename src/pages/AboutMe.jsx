@@ -20,7 +20,7 @@ const About = () => {
 				exit={{opacity: 0}}
 				className="container mx-auto"
 			>
-				<div className="flex flex-center">
+				<div className="flex flex-center text-primary-dark dark:text-primary-light">
 					<div className="font-general-regular w-full text-center">
 						{description}
 					</div>

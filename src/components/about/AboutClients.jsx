@@ -5,7 +5,8 @@ import background from '../../images/profileBackground.png';
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import ThilinaDP from "../../images/profileImages/thilina.png";
-import CharithDP from "../../images/profileImages/charith.jpeg"
+import CharithDP from "../../images/profileImages/charith.jpeg";
+import ChanakaDP from "../../images/profileImages/chanaka.png";
 
 const AboutClients = () => {
  const { clientsData, clientsHeading } = useContext(AboutMeContext);
@@ -21,7 +22,7 @@ const AboutClients = () => {
   {
     name: "Kaiya nayaka",
     role: "Senior Designer",
-    image: "https://picsum.photos/id/2/200/",
+    image: ChanakaDP,
     twitter: "#",
     linkedin: "#",
   },
