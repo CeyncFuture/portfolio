@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import AboutMeContext from '../../context/AboutMeContext';
 import AboutClientSingle from './AboutClientSingle';
 import background from '../../images/profileBackground.png';
-import { FaTwitter, FaLinkedin } from "react-icons/fa";
+import {FaTwitter, FaLinkedin, FaFacebook} from "react-icons/fa";
 import { motion } from "framer-motion";
 import ThilinaDP from "../../images/profileImages/thilina.png";
 import CharithDP from "../../images/profileImages/charith.jpeg";
@@ -13,29 +13,29 @@ const AboutClients = () => {
 
  const teamMembers = [
   {
-    name: "Pacha sajith",
-    role: "Copywriter",
+    name: "Thilina Pahalagedara",
+    role: "Software Engineer",
     image: ThilinaDP,
     twitter: "#",
     linkedin: "#",
   },
   {
-    name: "Kaiya nayaka",
-    role: "Senior Designer",
+    name: "Chanaka Herath",
+    role: "Software Engineer",
     image: ChanakaDP,
     twitter: "#",
     linkedin: "#",
   },
   {
-    name: "Hora mahee",
-    role: "Principal Designer",
+    name: "Lahiru Ekanayake",
+    role: "Project Manager",
     image: "https://picsum.photos/id/2/200",
     twitter: "#",
     linkedin: "#",
   },
   {
-   name: "KO raneeeel",
-   role: "Principal Designer",
+   name: "Charith Wijebandara",
+   role: "Software Engineer",
    image: CharithDP,
    twitter: "#",
    linkedin: "#",
@@ -61,7 +61,7 @@ const AboutClients = () => {
       transition: { duration: 0.25 },
      }}
     >
-     <div key={index} className="flex flex-row items-center text-center mx-5 ">
+     <div key={index} className="flex flex-row items-center justify-evenly flexWrap text-center mx-5 ">
      <div className="image-container" style={{position: 'relative', width: '200px', height: '200px'}}>
       <img
        src={background}
@@ -76,12 +76,12 @@ const AboutClients = () => {
        style={{position: 'absolute', top: '45px', left: '50px', zIndex: 2, width: '50%', height: 'auto'}}
       />
      </div>
-     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+     <div style={{display: 'flex', flexDirection: 'column', width: '200px', alignItems: 'center'}}>
       <h3 className="text-lg text-primary-dark dark:text-primary-light font-semibold">{member.name}</h3>
       <p className="text-gray-500 dark:text-primary-light  ">{member.role}</p>
       <div className="flex gap-4 mt-4 mb-5">
        <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-primary-light   hover:text-blue-500">
-        <FaTwitter size={20} />
+        <FaFacebook size={20} />
        </a>
        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-primary-light  hover:text-blue-700">
         <FaLinkedin size={20} />

@@ -1,11 +1,7 @@
 import {projects} from "../data/project";
 import ProjectCard from "./ProjectCard";
-import {useState} from "react";
-import ProjectModal from "../components/ProjectModal";
 
 const Projects = () => {
-	const [selected, setSelected] = useState(null);
-
 	return (
 		<>
 			<div id="projects" className="projects">
@@ -17,16 +13,10 @@ const Projects = () => {
 				</div>
 				{
 					projects.map((project, index) =>
-						<ProjectCard key={index} data={project} isLeftAligned={index % 2 === 0} onSelect={setSelected} />
+						<ProjectCard key={index} data={project} isLeftAligned={index % 2 === 0}/>
 					)
 				}
 			</div>
-			{selected &&
-				<ProjectModal
-					data={selected}
-					onClose={() => setSelected(null)}
-				/>
-			}
 		</>
 	);
 };

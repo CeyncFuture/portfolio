@@ -1,82 +1,42 @@
 const ProjectContent = ({desc, categories, images, technologies}) => {
     return (
         <div>
-            <div>
-                <div className="mb-3">
-                    {
-                        categories.map(category =>
-                            <span
-                                style={{
-                                    fontSize: "14px",
-                                    background: "linear-gradient(135deg, #ff7e5f, #feb47b)",
-                                    padding: "5px 15px",
-                                    borderRadius: "20px",
-                                    fontWeight: "bold",
-                                    textTransform: "uppercase",
-                                }}
-                            >
+            <div className="flex flex-wrap gap-2 mb-3">
+                {categories.map((category, index) =>
+                    <span
+                        key={index}
+                        className="text-sm px-4 py-1.5 text-white rounded-full font-bold uppercase bg-gradient-to-r from-[#ff7e5f] to-[#feb47b]"
+                        style={{background: "linear-gradient(135deg, #ff7e5f, #feb47b)"}}
+                    >
                                   {category}
                             </span>
-                        )
-                    }
-                </div>
-                <p style={{fontSize: "18px", marginBottom: "15px"}}>
-                    {desc}
-                </p>
-                <div style={{marginBottom: "20px"}}>
-                    <h6 style={{fontWeight: "500", marginBottom: "10px"}}>
-                        Technologies:
-                    </h6>
-                    <div
-                        style={{
-                            display: "flex",
-                            flexWrap: "wrap",
-                            gap: "8px",
-                        }}
-                    >
-                        {technologies.map((technology, index) => (
-                            <span
-                                key={index}
-                                style={{
-                                    backgroundColor: "#3498db",
-                                    padding: "8px 16px",
-                                    borderRadius: "20px",
-                                    fontSize: "14px",
-                                }}
-                            >
-                                    {technology}
-                                  </span>
-                        ))}
-                    </div>
+                )}
+            </div>
+            <p className="text-base mb-4">
+                {desc}
+            </p>
+            <div className="mb-4">
+                <h6 className="font-medium mb-2"> Technologies: </h6>
+                <div className="flex flex-wrap gap-2">
+                    {technologies.map((technology, index) =>
+                        <span
+                            key={index}
+                            className="px-4 py-2 text-white rounded-full text-sm"
+                            style={{backgroundColor: "#3498db"}}
+                        >
+                            {technology}
+                          </span>
+                    )}
                 </div>
             </div>
-            <div
-                style={{
-                    flex: "1 1 50%",
-                    overflow: "auto",
-                    maxHeight: "100%"
-                }}
-            >
+            <div className="flex-1 basis-1/2 overflow-auto max-h-full">
                 <div>
                     {images?.map((image, index) => (
-                        <div
-                            key={index}
-                            style={{
-                                marginBottom: "15px",
-                                width: "100%",
-                                flex: "1",
-                            }}
-                        >
+                        <div key={index} className="mb-4 w-full flex-1">
                             <img
+                                className="w-full rounded-lg border-0 object-cover h-auto"
                                 src={image}
                                 alt={`image_${index}`}
-                                style={{
-                                    width: "100%",
-                                    borderRadius: "10px",
-                                    border: "none",
-                                    objectFit: "cover",
-                                    height: "auto",
-                                }}
                             />
                         </div>
                     ))}
