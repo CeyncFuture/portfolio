@@ -203,7 +203,9 @@ body {
 .font-general-bold-italic {
 	font-family: 'GeneralSans-BoldItalic';
 }
-
+.footer-bg{
+	background-color: #f7f7f7;
+}
 /* Scroll to top style */
 .scrollToTop {
 	@apply bg-indigo-600;
@@ -231,4 +233,9 @@ body {
 	100% {
 		opacity: 0.5;
 	}
+}
+
+/* custom css */
+.footer-bg{
+	background-color: #f7f7f7;
 }
