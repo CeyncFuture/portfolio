@@ -2,10 +2,11 @@ import designIcon from "../../images/icons/design.svg";
 
 const Timeline = () => {
   return (
-    <ol class="items-center sm:flex">
+    <ol class="items-center md:flex">
       <li class="relative mb-6 sm:mb-0">
-        <div class="flex items-center">
-          <div class="z-10 flex items-center justify-center w-30 h-30 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+        <div class="flex items-center justify-evenly">
+          <div class="hidden md:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+          <div class="z-10 flex items-center justify-center w-30 h-30 bg-blue-100 rounded-full  dark:bg-blue-900 mx-2 shrink-0">
             <svg
               class="w-20 h-20 text-blue-500 dark:text-yellow-300"
               aria-hidden="true"
@@ -22,9 +23,9 @@ const Timeline = () => {
               />
             </svg>
           </div>
-          <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+          <div class="hidden md:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
-        <div class="mt-3 sm:pe-8">
+        <div class="mt-3 sm:pe-8 text-center">
           <h3 class="text-md font-semibold text-secondary-dark dark:text-secondary-light">
             Understanding Your Requirements
           </h3>
@@ -39,17 +40,14 @@ const Timeline = () => {
         </div>
       </li>
       <li class="relative mb-6 sm:mb-0">
-        <div class="flex items-center">
-          <div class="z-10 flex items-center justify-center w-30 h-30 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-            <img
-              src={designIcon}
-              className="w-20 h-20 p-4"
-              alt="design"
-            />
+        <div class="flex items-center justify-evenly">
+          <div class="hidden md:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+          <div class="z-10 flex items-center justify-center w-30 h-30 bg-blue-100 rounded-full  dark:bg-blue-900 mx-2 shrink-0">
+            <img src={designIcon} className="w-20 h-20 p-4" alt="design" />
           </div>
-          <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+          <div class="hidden md:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
-        <div class="mt-3 sm:pe-8">
+        <div class="mt-3 sm:pe-8 text-center">
           <h3 class="text-md font-semibold text-gray-900 dark:text-white">
             Sample Design & Approval
           </h3>
@@ -64,8 +62,9 @@ const Timeline = () => {
         </div>
       </li>
       <li class="relative mb-6 sm:mb-0">
-        <div class="flex items-center">
-          <div class="z-10 flex items-center justify-center w-30 h-30 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+        <div class="flex items-center justify-evenly">
+        <div class="hidden md:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+          <div class="z-10 flex items-center justify-center w-30 h-30 bg-blue-100 rounded-full  dark:bg-blue-900 mx-2 shrink-0">
             <svg
               class="w-20 h-20 text-green-600 dark:text-green-300"
               aria-hidden="true"
@@ -76,9 +75,9 @@ const Timeline = () => {
               <path d="M10 15.3 5.7 11l-1.4 1.4L10 18l10-10-1.4-1.4L10 15.3Z" />
             </svg>
           </div>
-          <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+          <div class="hidden md:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
-        <div class="mt-3 sm:pe-8">
+        <div class="mt-3 sm:pe-8 text-center">
           <h3 class="text-md font-semibold text-gray-900 dark:text-white">
             Successful Development & Delivery
           </h3>
