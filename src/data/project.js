@@ -9,6 +9,12 @@ import Medec04 from '../images/projects/Medec/04.jpeg';
 import Medec05 from '../images/projects/Medec/05.jpeg';
 import Medec06 from '../images/projects/Medec/06.jpeg';
 import Medec07 from '../images/projects/Medec/07.jpeg';
+import Payroll01 from '../images/projects/Payroll/01.png';
+import Payroll02 from '../images/projects/Payroll/02.png';
+import Payroll03 from '../images/projects/Payroll/03.png';
+import Payroll04 from '../images/projects/Payroll/04.png';
+import Payroll05 from '../images/projects/Payroll/05.png';
+import Payroll06 from '../images/projects/Payroll/06.png';
 
 export const projects = [
     {
@@ -60,13 +66,12 @@ export const projects = [
         categories: ['Web Application'],
         desc: "This payroll management software offers a comprehensive solution for handling all aspects of employee payroll with ease and accuracy. It allows businesses to automatically generate payslips based on employee data and salary structure, simplifying the payroll process and reducing manual work. Employee pay management is streamlined, enabling tracking of payments, deductions, and bonuses effortlessly. With built-in tools for data filtering and analysis, the software provides insights into payment trends and expenses, helping businesses make informed financial decisions. Summarizing payment data is quick and straightforward, offering managers a clear snapshot of payroll details. The software also includes a secure user management system that controls access, ensuring sensitive information remains protected.",
         images: [
-            Medec01,
-            Medec02,
-            Medec03,
-            Medec04,
-            Medec05,
-            Medec06,
-            Medec07
+            Payroll01,
+            Payroll02,
+            Payroll03,
+            Payroll04,
+            Payroll05,
+            Payroll06
         ],
         technologies: [
             "PHP",
