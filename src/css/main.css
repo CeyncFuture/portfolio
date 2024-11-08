@@ -1148,6 +1148,9 @@ input:checked + .toggle-bg {
 .max-h-full {
   max-height: 100%;
 }
+.max-h-80 {
+  max-height: 80vh;
+}
 .w-64 {
   width: 16rem;
 }
@@ -2525,4 +2528,8 @@ input:checked + .toggle-bg {
   .xl\:max-w-screen-xl {
     max-width: 1280px;
   }
+}
+
+.footer-bg{
+  background-color: #f7f7f7;
 }

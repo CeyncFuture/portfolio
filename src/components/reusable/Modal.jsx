@@ -7,7 +7,7 @@ const Modal = ({id, button, header, body, footer}) => {
     <>
       <button type="button" onClick={()=> setShow(true)}>{button}</button>
       <div id={id} tabIndex="-1" aria-hidden={!show} aria-modal={show} role='dialog'
-           className={`${!show ? 'hidden': ''} overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full`}>
+           className={`${!show ? 'hidden': ''} overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 max-h-full  bg-black bg-opacity-50 backdrop-blur-md flex`}>
         <div className="relative p-4 w-full max-w-4xl max-h-full">
           <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
             {header &&
@@ -27,8 +27,8 @@ const Modal = ({id, button, header, body, footer}) => {
                 <span className="sr-only">Close modal</span>
               </button>
             </div>}
-            <div className="p-4 md:p-5 space-y-4">
-              <p className="text-base overflow-y-auto leading-relaxed text-gray-500 dark:text-gray-400">
+            <div className="p-4 md:p-5 space-y-4 max-h-80 overflow-y-scroll">
+              <p className="text-base  leading-relaxed text-gray-500 dark:text-gray-400">
                 {body}
               </p>
             </div>
