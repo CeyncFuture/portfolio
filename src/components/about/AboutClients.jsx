@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import ThilinaDP from "../../images/profileImages/thilina.png";
 import CharithDP from "../../images/profileImages/charith.jpeg";
 import ChanakaDP from "../../images/profileImages/chanaka.png";
+import LahiruDP from "../../images/profileImages/lahiru.png";
 
 const AboutClients = () => {
  const { clientsData, clientsHeading } = useContext(AboutMeContext);
@@ -29,7 +30,7 @@ const AboutClients = () => {
   {
     name: "Lahiru Ekanayake",
     role: "Project Manager",
-    image: "https://picsum.photos/id/2/200",
+    image: LahiruDP,
     twitter: "#",
     linkedin: "#",
   },
