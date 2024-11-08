@@ -15,7 +15,7 @@ const ScrollLink = Scroll.Link;
 const AppHeader = ({activeTheme, setTheme}) => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
-	
+
 	function toggleMenu() {
 		if (!showMenu) {
 			setShowMenu(true);
@@ -54,7 +54,7 @@ const AppHeader = ({activeTheme, setTheme}) => {
 		  notifyError("Failed to send email. Please try again!")
 		  throw error;
 		}
-	  
+
 		showHireMeModal();
 	}
 
@@ -156,7 +156,7 @@ const AppHeader = ({activeTheme, setTheme}) => {
 						smooth={true}
 						duration={500}
 						offset={-50}
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block cursor-pointer text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Projects"
 					>
 						Projects

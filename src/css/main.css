@@ -1124,6 +1124,9 @@ input:checked + .toggle-bg {
 .h-5 {
   height: 1.25rem;
 }
+.h-\[calc\(100\%-1rem\)\] {
+  height: calc(100% - 1rem);
+}
 .h-8 {
   height: 2rem;
 }
@@ -1146,7 +1149,7 @@ input:checked + .toggle-bg {
   max-height: 100%;
 }
 .max-h-80 {
-  max-height: 20rem;
+  max-height: 85vh;
 }
 .w-64 {
   width: 16rem;
@@ -1306,6 +1309,9 @@ input:checked + .toggle-bg {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
 }
 .gap-10 {
   gap: 2.5rem;
@@ -1497,6 +1503,9 @@ input:checked + .toggle-bg {
 }
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
+}
+.footer-bg{
+  background-color: #f7f7f7;
 }
 .fill-current {
   fill: currentColor;

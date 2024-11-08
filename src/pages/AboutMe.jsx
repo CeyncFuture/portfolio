@@ -48,7 +48,7 @@ const About = () => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1, delay: 1 }}
 				exit={{ opacity: 0 }}
-				className="w-full"
+				className="w-full p-4"
 			>
 				<Timeline />
 			</motion.div>

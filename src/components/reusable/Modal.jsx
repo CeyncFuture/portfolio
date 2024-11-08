@@ -19,7 +19,7 @@ const Modal = ({id, button, header, body, footer}) => {
 
     return (
         <>
-            <button type="button" onClick={() => showModal()}>{button}</button>
+            <button type="button" className="hover:underline " onClick={() => showModal()}>{button}</button>
             <div id={id} tabIndex="-1" aria-hidden={!show} aria-modal={show} role='dialog'
                  className={`${!show ? 'hidden' : ''} overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 max-h-full  bg-black bg-opacity-50 backdrop-blur-md flex`}>
                 <div className="relative p-4 w-full max-w-4xl max-h-full">
@@ -45,13 +45,13 @@ const Modal = ({id, button, header, body, footer}) => {
                                 </button>
                             </div>}
                         <div className="p-4 md:p-5 space-y-4 max-h-80 overflow-y-scroll">
-                            <p className="text-base  leading-relaxed text-gray-500 dark:text-gray-400">
+                            <p className="text-base  leading-relaxed text-gray-500 dark:text-white">
                                 {body}
                             </p>
                         </div>
                         {footer &&
                             <div
-                                className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:text-white">
                                 {footer}
                             </div>}
                     </div>
