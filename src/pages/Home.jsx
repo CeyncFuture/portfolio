@@ -28,7 +28,7 @@ const Home = () => {
 				<div className="text-center">
 					<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light"
 					   style={{marginBottom: "7vh"}}>
-						What we do...
+						What We Offer
 					</p>
 				</div>
 				<WhatWeDo/>
@@ -42,7 +42,7 @@ const Home = () => {
 				<div className="text-center">
 					<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light"
 					   style={{marginBottom: "7vh"}}>
-						Who are we...
+						Get To Know Us
 					</p>
 				</div>
 				<About/>
