@@ -26,7 +26,7 @@ const ContactDetails = () => {
           <p className="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-5">
             Get In Touch
           </p>
-          <p className="font-general-medium text-lg">
+          <p className="font-general-medium text-lg dark:text-primary-light">
             Need help? <br /> just leave us a message, <br /> and we'll get back
             to you.
           </p>
@@ -50,7 +50,7 @@ const ContactDetails = () => {
           <p className="font-general-medium text-2xl mb-1 text-ternary-dark dark:text-ternary-light">
             Get In Touch
           </p>
-          <p className="font-general-medium text-lg">
+          <p className="font-general-medium text-lg dark:text-primary-light">
             Need help? <br /> just leave us a message, <br /> and we'll get back
             to you.
           </p>
