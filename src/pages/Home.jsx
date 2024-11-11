@@ -3,7 +3,7 @@ import TechSlider from '../components/TechSlider';
 import { techIcons } from '../data/sliders';
 import About from "./AboutMe";
 import Contact from "./Contact";
-import kk from "../images/divider.svg";
+import dividerImage from "../images/divider.svg";
 import WhatWeDo from "./WhatWeDo";
 import Projects from "./Projects";
 import { motion } from 'framer-motion';
@@ -17,13 +17,13 @@ const Home = () => {
 			<TechSlider techIcons={techIcons}/>
 
 			<div className='w-full'>
-				<img src={kk} alt='dsdsd' className='w-full'/>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
 			</div>
 
 			<Projects/>
 
 			<div className='w-full'>
-				<img src={kk} alt='dsdsd' className='w-full'/>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
 			</div>
 
 			<div id="about" className="about">
@@ -34,7 +34,14 @@ const Home = () => {
 					</p>
 				</div>
 				<WhatWeDo/>
-				<motion.div
+			</div>
+
+			
+			<div className='w-full'>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
+			</div>
+
+			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1, delay: 1 }}
 				exit={{ opacity: 0 }}
@@ -42,10 +49,9 @@ const Home = () => {
 			>
 				<ServicesSection />
 			</motion.div>
-			</div>
 
 			<div className='w-full'>
-				<img src={kk} alt='dsdsd' className='w-full'/>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
 			</div>
 
 			<div id="about" className="about">
@@ -59,7 +65,7 @@ const Home = () => {
 			</div>
 
 			<div className='w-full'>
-				<img src={kk} alt='dsdsd' className='w-full'/>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
 			</div>
 
 			<div id="contact" className="contact">
