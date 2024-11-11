@@ -27,7 +27,7 @@ const servicesData = [
 ];
 
 const ServiceCard = ({ icon, title, description }) => (
-  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center h-full flex flex-col justify-between">
+  <div className="bg-white dark:bg-ternary-dark rounded-lg shadow-lg p-6 text-center h-full flex flex-col justify-between">
     <div className="text-5xl mb-4">{icon}</div>
     <h3 className="text-xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
       {title}
