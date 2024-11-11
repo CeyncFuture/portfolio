@@ -6,7 +6,7 @@ import {FaTwitter, FaLinkedin, FaFacebook} from "react-icons/fa";
 import { motion } from "framer-motion";
 import ThilinaDP from "../../images/profileImages/thilina.png";
 import CharithDP from "../../images/profileImages/charith.jpeg";
-import ChanakaDP from "../../images/profileImages/chanaka.jpeg";
+import ChanakaDP from "../../images/profileImages/charith.jpeg";
 import LahiruDP from "../../images/profileImages/lahiru.png";
 
 const AboutClients = () => {

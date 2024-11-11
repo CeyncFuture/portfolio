@@ -6,6 +6,8 @@ import Contact from "./Contact";
 import kk from "../images/divider.svg";
 import WhatWeDo from "./WhatWeDo";
 import Projects from "./Projects";
+import { motion } from 'framer-motion';
+import ServicesSection from '../components/about/ServicesSection';
 
 const Home = () => {
 	return (
@@ -32,6 +34,14 @@ const Home = () => {
 					</p>
 				</div>
 				<WhatWeDo/>
+				<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, delay: 1 }}
+				exit={{ opacity: 0 }}
+				className="w-full p-4"
+			>
+				<ServicesSection />
+			</motion.div>
 			</div>
 
 			<div className='w-full'>
@@ -53,12 +63,6 @@ const Home = () => {
 			</div>
 
 			<div id="contact" className="contact">
-				<div className="text-center">
-					<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light"
-					   style={{marginBottom: "7vh"}}>
-						Let's talk...
-					</p>
-				</div>
 				<Contact/>
 			</div>
 		</div>
