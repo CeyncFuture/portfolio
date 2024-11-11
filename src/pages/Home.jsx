@@ -41,14 +41,9 @@ const Home = () => {
 				<img src={dividerImage} alt='dsdsd' className='w-full'/>
 			</div>
 
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
-				className="w-full p-4"
-			>
+			<div>
 				<ServicesSection />
-			</motion.div>
+			</div>
 
 			<div className='w-full'>
 				<img src={dividerImage} alt='dsdsd' className='w-full'/>
