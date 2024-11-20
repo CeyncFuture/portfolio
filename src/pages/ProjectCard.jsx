@@ -32,7 +32,7 @@ const ProjectCard = ({data, isLeftAligned}) => {
                 <div className="flex flex-wrap gap-3">
                     {categories.map((category) =>
                         <h1
-                            className="bg-indigo-500 font-medium text-white p-2 rounded-md mb-3"
+                            className=" font-medium text-indigo-500 border-solid border-2 border-indigo-500 p-2 rounded-2xl mb-3"
                             style={{width: "fit-content", fontSize: "12px"}}
                         >
                             {category}
