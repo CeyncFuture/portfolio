@@ -1,34 +1,56 @@
 import React from "react";
+import web from "../../images/icons/services/web.png";
+import mobile from "../../images/icons/services/mobile.png";
+import ui from "../../images/icons/services/ui_ux.png";
+import cloud from "../../images/icons/services/cloud.png";
+import eCommerce from "../../images/icons/services/e-commerce.png";
+import support from "../../images/icons/services/support.png";
 
 const servicesData = [
+
   {
-    title: "Consulting",
+    title: "Web App Development",
     description:
-      "Expert guidance to help you grow your business and navigate challenges.",
-    icon: "💼",
+      "Engaging, scalable web apps that elevate user experience.",
+    icon: web,
   },
   {
-    title: "Development",
+    title: "Mobile App Development",
     description:
-      "Custom software solutions to meet your unique business needs.",
-    icon: "💻",
+      "High-performance mobile applications for iOS and Android.",
+    icon: mobile,
   },
   {
-    title: "Design",
-    description: "Creative and user-centered design to elevate your brand.",
-    icon: "🎨",
+    title: "UI/UX Design",
+    description: "Intuitive and beautiful designs that put users first.",
+    icon: ui,
   },
   {
-    title: "Marketing",
+    title: "Cloud Solutions",
     description:
-      "Strategic marketing services to increase visibility and reach.",
-    icon: "📈",
+      "Secure, scalable cloud setups to power your business growth.",
+    icon: cloud,
+  },
+  {
+    title: "E-commerce Solutions",
+    description:
+      "Complete online store development for seamless shopping experiences.",
+    icon: eCommerce,
+  },
+  {
+    title: "Technical Support & Maintenance",
+    description:
+      "Reliable support to keep your software running smoothly.",
+    icon: support,
   },
 ];
 
 const ServiceCard = ({ icon, title, description }) => (
   <div className="bg-white dark:bg-ternary-dark rounded-lg shadow-lg p-6 text-center h-full flex flex-col justify-between">
-    <div className="text-5xl mb-4">{icon}</div>
+    <div className="text-5xl mb-4">
+      {/* <img src={icon} sizes=""/> */}
+      <img src={icon} alt="icon" width="100" height="100" className="mx-auto"/>
+    </div>
     <h3 className="text-xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
       {title}
     </h3>
