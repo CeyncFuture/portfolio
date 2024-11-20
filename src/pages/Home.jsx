@@ -3,9 +3,11 @@ import TechSlider from '../components/TechSlider';
 import { techIcons } from '../data/sliders';
 import About from "./AboutMe";
 import Contact from "./Contact";
-import kk from "../images/divider.svg";
+import dividerImage from "../images/divider.svg";
 import WhatWeDo from "./WhatWeDo";
 import Projects from "./Projects";
+import { motion } from 'framer-motion';
+import ServicesSection from '../components/about/ServicesSection';
 
 const Home = () => {
 	return (
@@ -15,13 +17,13 @@ const Home = () => {
 			<TechSlider techIcons={techIcons}/>
 
 			<div className='w-full'>
-				<img src={kk} alt='dsdsd' className='w-full'/>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
 			</div>
 
 			<Projects/>
 
 			<div className='w-full'>
-				<img src={kk} alt='dsdsd' className='w-full'/>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
 			</div>
 
 			<div id="about" className="about">
@@ -34,8 +36,17 @@ const Home = () => {
 				<WhatWeDo/>
 			</div>
 
+			
 			<div className='w-full'>
-				<img src={kk} alt='dsdsd' className='w-full'/>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
+			</div>
+
+			<div>
+				<ServicesSection />
+			</div>
+
+			<div className='w-full'>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
 			</div>
 
 			<div id="about" className="about">
@@ -49,16 +60,10 @@ const Home = () => {
 			</div>
 
 			<div className='w-full'>
-				<img src={kk} alt='dsdsd' className='w-full'/>
+				<img src={dividerImage} alt='dsdsd' className='w-full'/>
 			</div>
 
 			<div id="contact" className="contact">
-				<div className="text-center">
-					<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light"
-					   style={{marginBottom: "7vh"}}>
-						Let's talk...
-					</p>
-				</div>
 				<Contact/>
 			</div>
 		</div>
