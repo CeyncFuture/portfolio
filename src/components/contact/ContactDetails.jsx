@@ -31,9 +31,9 @@ const ContactDetails = () => {
             to you.
           </p>
         </div>
-        {/* <div className="flex"> */}
+
         <div className="hidden lg:block text-center mt-24 mb-24">
-        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+          <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
             Get In Touch
           </p>
           <p className="font-general-regular text-lg dark:text-primary-light mt-10">
@@ -41,9 +41,6 @@ const ContactDetails = () => {
             to you.
           </p>
         </div>
-        {/* <h2 className="font-general-medium text-xl text-primary-dark dark:text-primary-light mt-12 mb-8">
-          Contact details
-        </h2> */}
 
         <ul className="font-general-regular mt-10">
           {contacts.map((contact) => (
@@ -57,8 +54,7 @@ const ContactDetails = () => {
             </li>
           ))}
         </ul>
-        </div>
-      {/* </div> */}
+      </div>
     </div>
   );
 };
