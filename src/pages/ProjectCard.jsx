@@ -1,14 +1,30 @@
+import React from 'react';
 import Modal from "../components/reusable/Modal";
 import ProjectContent from "./ProjectContent";
 
 const ProjectCard = ({data, isLeftAligned}) => {
+    const [show, setShow] = React.useState(false);
     const {id, title, categories, technologies, desc, images} = data;
 
     const alignment = isLeftAligned ? 'flex-row' : 'flex-row-reverse';
 
+    const showModal = () => {
+        document
+            .getElementsByTagName("html")[0]
+            .classList.add("overflow-y-hidden");
+        setShow(true);
+    }
+
+    const closeModal = () => {
+        document
+            .getElementsByTagName("html")[0]
+            .classList.remove("overflow-y-hidden");
+        setShow(false);
+    }
+
     return (
         <div className={`flex flex-wrap justify-center mb-4 items-center ${alignment}`}>
-            <div className="mx-2" style={{maxWidth: '400px'}}>
+            <div className="mx-2 cursor-pointer" style={{maxWidth: '400px'}} onClick={() => showModal(true)}>
                 <img src={images[0]} className="rounded-xl border-none" alt={title}/>
             </div>
             <div className="p-6" style={{maxWidth: '600px'}}>
@@ -30,6 +46,10 @@ const ProjectCard = ({data, isLeftAligned}) => {
                         header={title}
                         body={<ProjectContent desc={desc} technologies={technologies} images={images} categories={categories}/>}
                         id={id}
+                        show={show}
+                        setShow={setShow}
+                        closeModal={closeModal}
+                        showModal={showModal}
                     />
                 </div>
                 <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" style={{marginTop: "15px"}}/>

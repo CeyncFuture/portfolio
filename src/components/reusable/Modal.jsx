@@ -1,21 +1,37 @@
 import React from 'react';
 
-const Modal = ({id, button, header, body, footer}) => {
-    const [show, setShow] = React.useState(false);
+const Modal = ({
+   id,
+   button,
+   header,
+   body, footer,
+   show: showProp,
+   setShow: setShowProp,
+   showModal: showModalProp,
+   closeModal: closeModalProp
+}) => {
+    const [internalShow, setInternalShow] = React.useState(false);
 
-    const showModal = () => {
-        document
-            .getElementsByTagName("html")[0]
-            .classList.add("overflow-y-hidden");
-        setShow(true);
-    }
+    const show = showProp !== undefined ? showProp : internalShow;
+    const setShow = setShowProp !== undefined ? setShowProp : setInternalShow;
 
-    const closeModal = () => {
-        document
-            .getElementsByTagName("html")[0]
-            .classList.remove("overflow-y-hidden");
-        setShow(false);
-    }
+    const showModal = showModalProp
+        ? showModalProp
+        : () => {
+            document
+                .getElementsByTagName("html")[0]
+                .classList.add("overflow-y-hidden");
+            setShow(true);
+        };
+
+    const closeModal = closeModalProp
+        ? closeModalProp
+        : () => {
+            document
+                .getElementsByTagName("html")[0]
+                .classList.remove("overflow-y-hidden");
+            setShow(false);
+        };
 
     return (
         <>
